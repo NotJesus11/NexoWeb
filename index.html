@@ -1,1 +1,229 @@
-<h1>NexoWeb</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexoWeb - Transforma tus ideas en realidad</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo negro */
+            color: #f0e68c; /* Texto dorado */
+            scroll-behavior: smooth; /* Desplazamiento suave */
+            overflow-x: hidden;
+        }
+
+        /* Fondo decorativo */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center / cover; /* Imagen relacionada a Minecraft */
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        /* Header dinámico */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            color: #f0e68c;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+        header.hidden {
+            transform: translateY(-100%);
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header a {
+            text-decoration: none;
+            color: #f0e68c;
+            margin: 0 10px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        header a:hover {
+            background-color: #6a0dad; /* Toque morado */
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 800px; /* Caja delgada */
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(50, 50, 50, 0.8); /* Fondo oscuro */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra */
+        }
+
+        /* Secciones */
+        section {
+            min-height: 100vh; /* Ocupa toda la pantalla */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #f0e68c;
+        }
+        #inicio {
+            background: linear-gradient(135deg, #6a0dad, #000); /* Negro con morado */
+        }
+        #servicios {
+            background: #111; /* Fondo oscuro */
+        }
+        #contacto {
+            background: linear-gradient(135deg, #000, #6a0dad); /* Negro con morado */
+        }
+
+        /* Servicios */
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .service-item {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: calc(50% - 20px); /* Dos servicios por fila */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #f0e68c;
+            transition: transform 0.3s ease;
+        }
+        .service-item:hover {
+            transform: scale(1.05); /* Efecto hover */
+        }
+        .service-item img {
+            width: 80%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .service-item h3 {
+            color: #6a0dad;
+        }
+
+        /* Botones */
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #f0e68c;
+            background-color: #6a0dad;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        a.button:hover {
+            background-color: #8a2be2;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #f0e68c;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .service-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <h1>NexoWeb</h1>
+            </div>
+            <div>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de inicio -->
+    <section id="inicio">
+        <div class="container">
+            <h2>Transforma tus ideas en realidad</h2>
+            <p>En NexoWeb llevamos tu pasión por Minecraft a niveles épicos, creando servidores y experiencias únicas.</p>
+        </div>
+    </section>
+
+    <!-- Sección de servicios -->
+    <section id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/150" alt="Servidor Minecraft">
+                    <h3>Administración de Servidores</h3>
+                    <p>Configuración avanzada con plugins o mods personalizados.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/150" alt="Modpacks">
+                    <h3>Creación de Modpacks</h3>
+                    <p>Modpacks optimizados para tu comunidad.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/150" alt="Campañas">
+                    <h3>Campañas en Redes Sociales</h3>
+                    <p>Promociona tu servidor y aumenta la visibilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>Cuéntanos sobre tu proyecto y hagámoslo realidad juntos.</p>
+            <a class="button" href="mailto:contacto@nexoweb.com">Enviar correo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 NexoWeb. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        // Ocultar/mostrar header al hacer scroll
+        let lastScroll = 0;
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll) {
+                header.classList.add('hidden'); // Ocultar al bajar
+            } else {
+                header.classList.remove('hidden'); // Mostrar al subir
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
